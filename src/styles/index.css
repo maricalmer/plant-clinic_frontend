@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #EDE5D5;
+}
+
+.ubuntu {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.merriweather {
+  font-family: 'Merriweather', serif;
+}
+
+/* Safari masonry bug fix */
+_::-webkit-full-page-media, _:future, :root .safari_only {
+  display: inline-block;
+}
