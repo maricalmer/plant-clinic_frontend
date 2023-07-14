@@ -14,7 +14,7 @@ import {
 } from '@apollo/client';
 
 const httpLink = createHttpLink({
-  uri: 'https://plant-clinic.fly.dev/graphql'
+  uri: 'https://pc-backend.fly.dev/graphql'
 });
 
 const authLink = setContext((_, { headers }) => {
