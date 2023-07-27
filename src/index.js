@@ -14,7 +14,7 @@ import {
 } from '@apollo/client';
 
 const httpLink = createHttpLink({
-  uri: 'https://pc-backend.fly.dev/graphql'
+  uri: 'https://peaceful-cliffs-79833-a8770ca52690.herokuapp.com/graphql'
 });
 
 const authLink = setContext((_, { headers }) => {
