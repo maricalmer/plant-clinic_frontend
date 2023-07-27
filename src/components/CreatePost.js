@@ -63,6 +63,7 @@ const CreatePost = () => {
   }
   const imageId = data.allPosts.length + 1
   const uploadImage = () => {
+    console.log(process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET)
     const data = new FormData()
     data.append("file", image)
     data.append("upload_preset", process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET)
