@@ -23,11 +23,16 @@ const CREATE_POST_MUTATION = gql`
           name
         }
       }
+      comments {
+        id
+      }
     }
   }
 `;
 
 const CreatePost = () => {
+  console.log(`from top of CreatePost: ${process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET}`)
+  console.log(`from top of CreatePost: ${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}`)
   const [image, setImage] = useState("");
   const { loading, data, error } = useQuery(FEED_QUERY);
   const navigate = useNavigate();
@@ -63,7 +68,8 @@ const CreatePost = () => {
   }
   const imageId = data.allPosts.length + 1
   const uploadImage = () => {
-    console.log(process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET)
+    console.log(`from uploadImage: ${process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET}`)
+    console.log(`from uploadImage: ${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}`)
     const data = new FormData()
     data.append("file", image)
     data.append("upload_preset", process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET)
