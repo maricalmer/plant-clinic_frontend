@@ -65,9 +65,9 @@ const CreatePost = () => {
   if (error) {
     console.log(error)
   }
-  const imageSlug = parameterize(formState.title);
-  console.log(imageSlug);
   const uploadImage = () => {
+    const imageSlug = parameterize(formState.title);
+    console.log(imageSlug);
     const data = new FormData()
     data.append("file", image)
     data.append("upload_preset", process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET)
