@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useQuery, useMutation, gql } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
+import { parameterize } from 'parameterize';
 import { FEED_QUERY } from './PostList';
 
 const CREATE_POST_MUTATION = gql`
@@ -64,13 +65,14 @@ const CreatePost = () => {
   if (error) {
     console.log(error)
   }
-  const imageId = data.allPosts.length + 1
+  const imageSlug = parameterize(formState.title);
+  console.log(imageSlug);
   const uploadImage = () => {
     const data = new FormData()
     data.append("file", image)
     data.append("upload_preset", process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET)
     data.append("cloud_name", process.env.REACT_APP_CLOUDINARY_CLOUD_NAME)
-    data.append("public_id", `image-${imageId}`)
+    data.append("public_id", `${imageSlug}`)
     fetch(`https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`, {
       method: "post",
       body: data
