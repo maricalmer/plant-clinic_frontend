@@ -67,7 +67,7 @@ const CreatePost = () => {
   }
   const uploadImage = () => {
     const imageSlug = parameterize(formState.title);
-    console.log(imageSlug);
+    console.log(`imageSlug:${imageSlug}`);
     const data = new FormData()
     data.append("file", image)
     data.append("upload_preset", process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET)
@@ -79,7 +79,7 @@ const CreatePost = () => {
     })
       .then(resp => resp.json())
       .catch(err => console.log(err))
-    console.log(data);
+    console.log(`data:${data}`);
   }
 
   return (
