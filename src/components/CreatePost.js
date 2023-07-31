@@ -33,7 +33,7 @@ const CREATE_POST_MUTATION = gql`
 
 const CreatePost = () => {
   const [image, setImage] = useState("");
-  const { loading, data, error } = useQuery(FEED_QUERY);
+  const { loading, error } = useQuery(FEED_QUERY);
   const navigate = useNavigate();
   const [formState, setFormState] = useState({
     description: '',
@@ -72,13 +72,14 @@ const CreatePost = () => {
     data.append("file", image)
     data.append("upload_preset", process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET)
     data.append("cloud_name", process.env.REACT_APP_CLOUDINARY_CLOUD_NAME)
-    data.append("public_id", `${imageSlug}`)
+    data.append("public_id", imageSlug)
     fetch(`https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload`, {
       method: "post",
       body: data
     })
       .then(resp => resp.json())
       .catch(err => console.log(err))
+    console.log(data);
   }
 
   return (
