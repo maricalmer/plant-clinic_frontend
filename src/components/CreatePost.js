@@ -31,7 +31,7 @@ const CREATE_POST_MUTATION = gql`
 `;
 
 const CreatePost = () => {
-  console.log(`heroku var: ${process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET}`)
+  console.log(`heroku var: ${process}`)
   const [image, setImage] = useState("");
   const { loading, data, error } = useQuery(FEED_QUERY);
   const navigate = useNavigate();
