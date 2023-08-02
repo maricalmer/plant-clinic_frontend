@@ -41,7 +41,7 @@ const Login = () => {
     },
     onCompleted: (data) => {
       console.log(`DATA FROM LOGIN.JS`)
-      console.log(`${data}`)
+      console.log(data)
       const tokenWithId = `${data.signinUser.token}/start/${data.signinUser.user.id}/end/`
       localStorage.setItem(AUTH_TOKEN, tokenWithId);
       navigate('/');
