@@ -18,9 +18,6 @@ const httpLink = createHttpLink({
   credentials: 'include'
 });
 
-console.log(`HTTP_LINK_FROM_APOLLO:`);
-console.log(httpLink);
-
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem(AUTH_TOKEN);
   return {
@@ -30,6 +27,9 @@ const authLink = setContext((_, { headers }) => {
     }
   };
 });
+
+console.log(`HTTP_LINK_FROM_APOLLO:`);
+console.log(authLink.concat(httpLink));
 
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
