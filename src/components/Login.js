@@ -43,8 +43,8 @@ const Login = () => {
       if (data.signinUser === null) {
         document.querySelector(".error-message").innerHTML = "wrong email/password"
       } else {
-        const token = `${data.signinUser.token}/start/${data.signinUser.user.id}/end/`
-        localStorage.setItem(AUTH_TOKEN, token);
+        const tokenWithId = `${data.signinUser.token}/start/${data.signinUser.user.id}/end/`
+        localStorage.setItem(AUTH_TOKEN, tokenWithId);
         navigate('/');
       }
     }
@@ -59,8 +59,8 @@ const Login = () => {
     onCompleted: (data) => {
       console.log(`DATA FROM LOGIN.JS`)
       console.log(data.createUser)
-      const token = `${data.createUser.token}/start/${data.createUser.user.id}/end/`
-      localStorage.setItem(AUTH_TOKEN, token);
+      const tokenWithId = `${data.createUser.token}/start/${data.createUser.user.id}/end/`
+      localStorage.setItem(AUTH_TOKEN, tokenWithId);
       navigate('/');
     }
   });
