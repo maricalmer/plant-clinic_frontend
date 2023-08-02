@@ -18,6 +18,8 @@ const httpLink = createHttpLink({
   credentials: 'include'
 });
 
+console.log(httpLink);
+
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem(AUTH_TOKEN);
   return {
