@@ -14,8 +14,7 @@ import {
 } from '@apollo/client';
 
 const httpLink = createHttpLink({
-  uri: 'https://peaceful-cliffs-79833-a8770ca52690.herokuapp.com/graphql',
-  credentials: 'include'
+  uri: 'https://peaceful-cliffs-79833-a8770ca52690.herokuapp.com/graphql'
 });
 
 const authLink = setContext((_, { headers }) => {
