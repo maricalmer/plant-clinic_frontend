@@ -20,7 +20,6 @@ const httpLink = createHttpLink({
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem(AUTH_TOKEN);
   console.log(`TOKEN FROM INDEX.JS`)
-  console.log(`${token}`)
   console.log(token);
   return {
     headers: {

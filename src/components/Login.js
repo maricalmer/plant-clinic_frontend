@@ -45,6 +45,9 @@ const Login = () => {
       const tokenWithId = `${data.signinUser.token}/start/${data.signinUser.user.id}/end/`
       localStorage.setItem(AUTH_TOKEN, tokenWithId);
       navigate('/');
+    },
+    onError: (error) => {
+      return (<div>ERROR</div>)
     }
   });
 
