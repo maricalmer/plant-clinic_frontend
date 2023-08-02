@@ -107,7 +107,7 @@ const Login = () => {
           placeholder="Type your password..."
         />
       </div>
-      <div className="error-message"></div>
+      <div className="error-message text-center h-5 text-xs text-red-500"></div>
       <div className="flex flex-col items-center">
         <button
           className="w-3/5 mt-4 bg-lime-500 rounded-md p-2 md:mt-10 lg:w-2/5"
