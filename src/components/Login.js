@@ -40,7 +40,7 @@ const Login = () => {
       password: formState.password
     },
     onCompleted: (data) => {
-      console.log(data)
+      console.log(`DATA FROM LOGIN.JS:${data}`)
       const tokenWithId = `${data.signinUser.token}/start/${data.signinUser.user.id}/end/`
       localStorage.setItem(AUTH_TOKEN, tokenWithId);
       navigate('/');
