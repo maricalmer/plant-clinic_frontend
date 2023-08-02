@@ -42,7 +42,7 @@ const Login = () => {
     onCompleted: (data) => {
       console.log(`DATA FROM LOGIN.JS`)
       console.log(data.signinUser)
-      if (data.signinUser === null) { document.querySelector(".font-bold").innerHTML = "ERROR" }
+      if (data.signinUser === null) { document.querySelector(".error-message").innerHTML = "wrong email/password" }
       const tokenWithId = `${data.signinUser.token}/start/${data.signinUser.user.id}/end/`
       localStorage.setItem(AUTH_TOKEN, tokenWithId);
       navigate('/');
@@ -107,6 +107,7 @@ const Login = () => {
           placeholder="Type your password..."
         />
       </div>
+      <div className="error-message"></div>
       <div className="flex flex-col items-center">
         <button
           className="w-3/5 mt-4 bg-lime-500 rounded-md p-2 md:mt-10 lg:w-2/5"
