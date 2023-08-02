@@ -18,7 +18,8 @@ const httpLink = createHttpLink({
   credentials: 'include'
 });
 
-console.log(`HTTP_LINK_FROM_APOLLO: ${httpLink}`);
+console.log(`HTTP_LINK_FROM_APOLLO:`);
+console.log(httpLink);
 
 const authLink = setContext((_, { headers }) => {
   const token = localStorage.getItem(AUTH_TOKEN);
