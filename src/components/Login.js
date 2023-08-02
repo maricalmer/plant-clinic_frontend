@@ -62,6 +62,10 @@ const Login = () => {
       const tokenWithId = `${data.createUser.token}/start/${data.createUser.user.id}/end/`
       localStorage.setItem(AUTH_TOKEN, tokenWithId);
       navigate('/');
+    },
+    onError: (error) => {
+      console.log(`ERROR FROM LOGIN.JS`)
+      console.log(error)
     }
   });
 
