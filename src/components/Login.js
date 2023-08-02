@@ -42,12 +42,10 @@ const Login = () => {
     onCompleted: (data) => {
       console.log(`DATA FROM LOGIN.JS`)
       console.log(data.signinUser)
+      if (data.signinUser === null) return ( <div>ERROR</div> )
       const tokenWithId = `${data.signinUser.token}/start/${data.signinUser.user.id}/end/`
       localStorage.setItem(AUTH_TOKEN, tokenWithId);
       navigate('/');
-    },
-    onError: (error) => {
-      return (<div>ERROR</div>)
     }
   });
 
