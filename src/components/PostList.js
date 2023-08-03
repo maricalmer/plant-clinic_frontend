@@ -1,5 +1,6 @@
 import React from 'react';
 import Post from './Post';
+import Flash from './Flash';
 import { useQuery, gql } from '@apollo/client';
 
 export const FEED_QUERY = gql`
@@ -48,6 +49,9 @@ const PostList = () => {
           </>
         )}
       </ul>
+      <div>
+        <Flash/>
+      </div>
     </div>
   );
 };
