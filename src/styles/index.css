@@ -23,29 +23,8 @@ _::-webkit-full-page-media, _:future, :root .safari_only {
 
 
 
-Write Sign In Building a flash message component with React.js Jaouad Ballat Jaouad Ballat · Follow 3 min read · Jun 3,
-2019 Photo by Sebastian Unrau on Unsplash In this article,
-I am going to walk through how to build a custom flash message component using React.js. I will assume you have already some knowledge about React.js and how to set up a new project with. so I am not going to cover the basics of React.js. Let’s get started To get started,
-let’s create our Flash component and register it in our src/components/Flash/index.js file. Next,
-we need to include this component in our welcome view so that it will show up on the page. I usually insert it App.js file in the root directory. We will want this component mounted on any page that might use it. import React from 'react';
 
-import {
-  BrowserRouter
-}
-
-from 'react-router-dom';
-import Flash from './components/Flash';
-import RouterView from './router';
-
-const App=()=> {
-  return (<div className="App" ><Flash /><BrowserRouter><RouterView></RouterView></BrowserRouter></div>);
-}
-
-export default App;
-
-Styling the component Let’s get some basic styling done using CSS. The following markup will place the component in the top right of the screen,
-add a close icon in the top right of the component,
-and provide some decent styling. .alert {
+.alert {
   color: white;
   border-radius: 10px;
   position: absolute;
