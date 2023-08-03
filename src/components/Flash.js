@@ -1,12 +1,38 @@
-import React from 'react';
-import FlashMessage from 'react-flash-message';
+import React, { useEffect, useState } from 'react';
+import Bus from '../utils/bus';
 
-const Message = () => (
-  <FlashMessage duration={3000} persistOnHover={true}>
-    <div className="p-3">
-      <strong>Image uploading, refresh the page in few seconds!</strong>
+import '../styles/index.css';
+
+export const Flash = () => {
+  let [visibility, setVisibility] = useState(false);
+  let [message, setMessage] = useState('');
+  let [type, setType] = useState('');
+
+  useEffect(() => {
+    Bus.addListener('flash', ({ message, type }) => {
+      setVisibility(true);
+      setMessage(message);
+      setType(type);
+      setTimeout(() => {
+        setVisibility(false);
+      }, 4000);
+    });
+
+
+  }, []);
+
+  useEffect(() => {
+    if (document.querySelector('.close') !== null) {
+      document.
+        querySelector('.close').
+        addEventListener('click', () => setVisibility(false));
+    }
+  })
+
+  return (
+    visibility && <div className={`alert alert-${type}`}>
+      <span className="close"><strong>X</strong></span>
+      <p>{message}</p>
     </div>
-  </FlashMessage>
-)
-
-export default Message;
+  )
+}

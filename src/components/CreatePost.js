@@ -40,10 +40,6 @@ const CreatePost = () => {
     title: ''
   });
 
-  const showFlash = () => {
-    document.querySelector(".flash").classList.add("block");
-  }
-
   const [createPost] = useMutation(CREATE_POST_MUTATION, {
     variables: {
       description: formState.description,
@@ -62,7 +58,7 @@ const CreatePost = () => {
     },
     onCompleted: () => {
       navigate("/");
-      showFlash();
+      window.flash('record has been created successfully!', 'success')
     }
   });
 

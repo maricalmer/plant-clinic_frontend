@@ -1,6 +1,8 @@
 import React from 'react';
 import Post from './Post';
+import Message from './Message';
 import Flash from './Flash';
+import Bus from '../utils/bus';
 import { useQuery, gql } from '@apollo/client';
 
 export const FEED_QUERY = gql`
@@ -31,6 +33,8 @@ export const FEED_QUERY = gql`
 `;
 
 const PostList = () => {
+  window.flash = (message, type = "success") => Bus.emit('flash', ({ message, type }));
+
   const { data, loading } = useQuery(FEED_QUERY);
 
   if (loading) {
@@ -50,6 +54,9 @@ const PostList = () => {
         )}
       </ul>
       <div className="flash fixed bottom-5 right-5 bg-lime-500 rounded-md font-light text-xs ubuntu hidden">
+        <Message/>
+      </div>
+      <div>
         <Flash/>
       </div>
     </div>
