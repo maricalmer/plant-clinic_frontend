@@ -33,7 +33,7 @@ export const FEED_QUERY = gql`
 `;
 
 const PostList = () => {
-  window.flash = (message, type = "success") => Bus.emit('flash', ({ message, type }));
+  window.flash = () => Bus.emit('flash');
 
   const { data, loading } = useQuery(FEED_QUERY);
 

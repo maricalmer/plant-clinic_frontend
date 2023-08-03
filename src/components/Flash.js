@@ -5,32 +5,19 @@ import '../styles/index.css';
 
 export const Flash = () => {
   let [visibility, setVisibility] = useState(false);
-  let [message, setMessage] = useState('');
-  let [type, setType] = useState('');
 
   useEffect(() => {
-    Bus.addListener('flash', ({ message, type }) => {
+    Bus.addListener('flash', () => {
       setVisibility(true);
-      setMessage(message);
-      setType(type);
       setTimeout(() => {
         setVisibility(false);
       }, 100000);
     });
-
-
   }, []);
 
-  useEffect(() => {
-    if (document.querySelector('.close') !== null) {
-      document.querySelector('.close').addEventListener('click', () => setVisibility(false));
-    }
-  })
-
   return (
-    visibility && <div className={`alert alert-${type}`}>
-      <span className="close"><strong>X</strong></span>
-      <p>{message}</p>
+    visibility && <div className="p-3">
+      <strong>Image uploading, refresh the page in few seconds!</strong>
     </div>
   )
 }

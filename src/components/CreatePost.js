@@ -58,8 +58,7 @@ const CreatePost = () => {
     },
     onCompleted: () => {
       navigate("/");
-      window.flash('record has been created successfully!', 'success')
-      console.log('FLASH MESSAGE SENT')
+      window.flash()
     }
   });
 
