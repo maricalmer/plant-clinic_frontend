@@ -58,7 +58,6 @@ const CreatePost = () => {
     },
     onCompleted: () => {
       navigate("/");
-      window.flash()
     }
   });
 

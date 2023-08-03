@@ -1,7 +1,5 @@
 import React from 'react';
 import Post from './Post';
-import Message from './Message';
-import Flash from './Flash';
 import { useQuery, gql } from '@apollo/client';
 
 export const FEED_QUERY = gql`
@@ -50,12 +48,6 @@ const PostList = () => {
           </>
         )}
       </ul>
-      <div className="flash fixed bottom-5 right-5 bg-lime-500 rounded-md font-light text-xs ubuntu hidden">
-        <Message/>
-      </div>
-      <div className= "fixed bottom-5 right-5 bg-lime-500 rounded-md font-light text-xs ubuntu">
-        <Flash/>
-      </div>
     </div>
   );
 };
