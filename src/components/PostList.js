@@ -2,7 +2,7 @@ import React from 'react';
 import Post from './Post';
 import Message from './Message';
 import Flash from './Flash';
-import Bus from '../utils/bus';
+import { Bus } from '../utils/bus';
 import { useQuery, gql } from '@apollo/client';
 
 export const FEED_QUERY = gql`
