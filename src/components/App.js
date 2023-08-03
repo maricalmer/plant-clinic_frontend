@@ -7,8 +7,10 @@ import Login from './Login';
 import Search from './Search';
 import NoMatch from './NoMatch';
 import PostDetails from './PostDetails';
+import { Bus } from '../utils/bus';
 
 const App = () => {
+  window.flash = () => Bus.emit('flash');
   return (
     <div>
       <Header />

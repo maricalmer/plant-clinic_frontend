@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Bus } from '../utils/bus';
 
-import '../styles/index.css';
-
-export const Flash = () => {
+const Flash = () => {
   let [visibility, setVisibility] = useState(false);
 
   useEffect(() => {
