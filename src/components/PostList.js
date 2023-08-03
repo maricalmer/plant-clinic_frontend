@@ -35,7 +35,7 @@ const PostList = () => {
 
   if (loading) {
     return (
-    <div>
+    <div className="h-screen flex flex-col">
       <BounceLoader
         color={"#82CB1B"}
         loading={loading}
