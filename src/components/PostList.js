@@ -1,7 +1,6 @@
-import { React, CSSProperties } from "react";
+import React from 'react';
 import Post from './Post';
 import { useQuery, gql } from '@apollo/client';
-import BounceLoader from "react-spinners/BounceLoader";
 
 export const FEED_QUERY = gql`
   {
@@ -33,26 +32,24 @@ export const FEED_QUERY = gql`
 const PostList = () => {
   const { data, loading } = useQuery(FEED_QUERY);
 
-  const override: CSSProperties = {
-    display: "block",
-    margin: "0 auto",
-    borderColor: "red",
-  };
-
-  if (data) {
-    return (
-    <div className="h-screen flex flex-col items-center">
-      <BounceLoader
-        color={"#82CB1B"}
-        loading={loading}
-        size={50}
-        aria-label="Loading Spinner"
-        data-testid="loader"
-      />
-     </div>
-    )
+  if (loading) {
+    return (<div>LOADING ...</div>)
   }
 
+  return (
+    <div className="merriweather p-6 min-h-[calc(100vh-4rem)] h-fit">
+      <div className="font-bold text-6xl my-14">Recent posts</div>
+      <ul className="gap-8 columns-1 sm:columns-2 md:columns-3 lg:columns-4">
+        {data && (
+          <>
+            {data.allPosts.map((post) => (
+              <Post key={post.id} post={post} />
+            ))}
+          </>
+        )}
+      </ul>
+    </div>
+  );
 };
 
 export default PostList;
