@@ -34,3 +34,5 @@ export const Flash = () => {
     </div>
   )
 }
+
+export default Flash;
