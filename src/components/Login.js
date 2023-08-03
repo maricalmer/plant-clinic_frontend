@@ -57,8 +57,6 @@ const Login = () => {
       password: formState.password
     },
     onCompleted: (data) => {
-      console.log(`DATA FROM LOGIN.JS`)
-      console.log(data.createUser)
       const tokenWithId = `${data.createUser.token}/start/${data.createUser.user.id}/end/`
       localStorage.setItem(AUTH_TOKEN, tokenWithId);
       navigate('/');
