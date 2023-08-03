@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Bus } from '../utils/bus';
 
 const Flash = () => {
-  let [visibility, setVisibility] = useState(true);
+  let [visibility, setVisibility] = useState(false);
 
   useEffect(() => {
     Bus.addListener('flash', () => {
