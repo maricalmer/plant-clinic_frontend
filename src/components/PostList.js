@@ -33,7 +33,7 @@ export const FEED_QUERY = gql`
 const PostList = () => {
   const { data, loading } = useQuery(FEED_QUERY);
 
-  // if (loading) {
+  if (data) {
     return (
     <div className="h-screen flex flex-col mx-auto">
       <BounceLoader
@@ -45,7 +45,7 @@ const PostList = () => {
       />
      </div>
     )
-  // }
+  }
 
   // return (
   //   <div className="merriweather p-6 min-h-[calc(100vh-4rem)] h-fit">
