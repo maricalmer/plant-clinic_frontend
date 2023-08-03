@@ -38,7 +38,7 @@ const PostList = () => {
     <div className="h-screen flex flex-col items-center">
       <BounceLoader
         color={"#82CB1B"}
-        size={100}
+        size={50}
         aria-label="Loading Spinner"
         data-testid="loader"
       />
