@@ -1,6 +1,7 @@
 import React from 'react';
 import Post from './Post';
 import { useQuery, gql } from '@apollo/client';
+import BounceLoader from "react-spinners/BounceLoader";
 
 export const FEED_QUERY = gql`
   {
@@ -33,7 +34,17 @@ const PostList = () => {
   const { data, loading } = useQuery(FEED_QUERY);
 
   if (loading) {
-    return (<div>LOADING ...</div>)
+    return (
+    <div>
+      <BounceLoader
+        color={"#82CB1B"}
+        loading={loading}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+     </div>
+    )
   }
 
   return (
