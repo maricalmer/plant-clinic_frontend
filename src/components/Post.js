@@ -5,6 +5,9 @@ import { timeDifferenceForDate } from '../utils/time';
 
 const Post = (props) => {
   const { post } = props;
+  const formatDescription = (description) => {
+    return description.length < 100 ? description : description.slice(0, 100) + '...';
+  }
 
   return (
     <div className="safari_only mb-4 w-full">
@@ -18,7 +21,7 @@ const Post = (props) => {
               {post.title}
             </div>
             <div className="font-light mt-2 border-b border-b-orange-200 pb-2">
-              {post.description}
+              {formatDescription(post.description)}
             </div>
             <div className="font-light text-xs mt-2 md:max-lg:block">
               <div className="flex justify-center">
