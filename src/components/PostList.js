@@ -35,11 +35,10 @@ const PostList = () => {
 
   if (data) {
     return (
-    <div className="h-screen flex flex-col mx-auto">
+    <div className="h-screen flex flex-col items-center">
       <BounceLoader
         color={"#82CB1B"}
-        loading={data}
-        size={150}
+        size={100}
         aria-label="Loading Spinner"
         data-testid="loader"
       />
