@@ -49,7 +49,7 @@ const PostList = () => {
           </>
         )}
       </ul>
-      <div>
+      <div className="flash fixed bottom-5 right-5 bg-lime-500 rounded-md font-light text-xs ubuntu hidden">
         <Flash/>
       </div>
     </div>

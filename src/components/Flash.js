@@ -1,12 +1,12 @@
 import React from 'react';
-import FlashMessage from 'react-flash-message'
+import FlashMessage from 'react-flash-message';
 
 const Message = () => (
-  <div className="fixed bottom-0">
-    <FlashMessage duration={100000} persistOnHover={true}>
-      <strong>I will disapper in 5 seconds!</strong>
-    </FlashMessage>
-  </div>
+  <FlashMessage duration={3000} persistOnHover={true}>
+    <div className="p-3">
+      <strong>Image uploading, refresh the page in few seconds!</strong>
+    </div>
+  </FlashMessage>
 )
 
 export default Message;
