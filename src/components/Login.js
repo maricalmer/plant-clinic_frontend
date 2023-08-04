@@ -111,13 +111,13 @@ const Login = () => {
       <div className="error-message text-center h-5 text-xs text-red-500"></div>
       <div className="flex flex-col items-center">
         <button
-          className="w-3/5 mt-4 bg-lime-500 rounded-md p-2 md:mt-10 lg:w-2/5"
+          className="w-3/5 mt-4 bg-lime-700 text-lime-950 rounded-md p-2 md:mt-10 lg:w-2/5"
           onClick={formState.login ? login : signup}
         >
           {formState.login ? 'login' : 'create account'}
         </button>
         <button
-          className="w-3/5 mt-4 bg-lime-500 rounded-md p-2 mb-20 lg:w-2/5"
+          className="w-3/5 mt-4 bg-lime-700 text-lime-950 rounded-md p-2 mb-20 lg:w-2/5"
           onClick={(e) =>
             setFormState({
               ...formState,

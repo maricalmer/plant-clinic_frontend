@@ -126,7 +126,7 @@ const CreatePost = () => {
               onChange={(e) => setImage(e.target.files[0])}
             />
           </div>
-          <button className="w-1/5 bg-lime-500 rounded-md p-2" type="submit" onClick={uploadImage}>Submit</button>
+          <button className="w-1/5 bg-lime-700 text-lime-950 rounded-md p-2" type="submit" onClick={uploadImage}>Submit</button>
         </form>
       </div>
     </div>
