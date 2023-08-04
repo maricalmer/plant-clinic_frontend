@@ -117,7 +117,7 @@ const Login = () => {
           {formState.login ? 'login' : 'create account'}
         </button>
         <button
-          className="w-3/5 mt-4 bg-lime-700 text-lime-950 rounded-md p-2 mb-20 lg:w-2/5"
+          className="w-3/5 mt-4 bg-lime-700 text-lime-300 rounded-md p-2 mb-20 lg:w-2/5"
           onClick={(e) =>
             setFormState({
               ...formState,
