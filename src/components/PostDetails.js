@@ -114,7 +114,7 @@ const PostDetails = () => {
                         type="text"
                         placeholder="Add comment..."
                       />
-                      <button className="mt-4 bg-lime-500 rounded-md p-2 lg:mt-0 lg:h-20" type="submit" onClick={() => { navigate(`/login`) }}>Comment</button>
+                        <button className="mt-4 bg-lime-700 text-lime-300 rounded-md p-2 lg:mt-0 lg:h-20" type="submit" onClick={() => { navigate(`/login`) }}>Comment</button>
                     </div>
                   </form>
                 </div>
