@@ -1,15 +1,14 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useQuery, gql } from '@apollo/client';
-import Pluralize from 'pluralize';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons'
+import Pluralize from 'pluralize';
 import Like from './Like';
 import Dislike from './Dislike';
 import CreateComment from './CreateComment';
 import Comment from './Comment';
 import { AUTH_TOKEN } from '../utils/constants';
-import { useNavigate } from 'react-router-dom';
 import { timeDifferenceForDate } from '../utils/time';
 
 export const FETCH_QUERY = gql`

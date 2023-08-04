@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { useQuery, useMutation, gql } from '@apollo/client';
 import { useNavigate } from 'react-router-dom';
+import { useQuery, useMutation, gql } from '@apollo/client';
 import { parameterize } from '../utils/parameterize';
 import { FEED_QUERY } from './PostList';
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import Post from './Post';
 import { useQuery, gql } from '@apollo/client';
+import Post from './Post';
 
 export const FEED_QUERY = gql`
   {

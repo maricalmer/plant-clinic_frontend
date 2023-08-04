@@ -1,8 +1,8 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import CreatePost from './CreatePost';
 import Header from './Header';
 import PostList from './PostList';
-import { Route, Routes } from 'react-router-dom';
 import Login from './Login';
 import Search from './Search';
 import NoMatch from './NoMatch';

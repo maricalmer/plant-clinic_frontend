@@ -1,7 +1,7 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlantWilt } from '@fortawesome/free-solid-svg-icons'
-import { Link, useNavigate } from 'react-router-dom';
 import { AUTH_TOKEN } from '../utils/constants';
 
 const Header = () => {
