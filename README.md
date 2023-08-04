@@ -11,21 +11,16 @@ The core function of plant-clinic is to diagnose sick plants. If a user wonders 
 ## Web App
 
 plant-clinic is developed using:
-- Rails API with GraphQL for backend. Supported by PostgreSQL database and running on Heroku [GitHub] (https://github.com/maricalmer/plant-clinic_backend)
-- React with GraphQL + Apollo Client for frontend. Deployed on Netlify [GitHub] (https://github.com/maricalmer/plant-clinic_frontend)
+- Rails API with GraphQL for backend. Supported by PostgreSQL database and running on Heroku [GitHub](https://github.com/maricalmer/plant-clinic_backend)
+- React with GraphQL + Apollo Client for frontend. Deployed on Netlify [GitHub](https://github.com/maricalmer/plant-clinic_frontend)
 
 ## React Client
-
-plant-clinic is developed using:
-- Rails API with GraphQL for backend. Supported by PostgreSQL database and running on Heroku [GitHub] (https://github.com/maricalmer/plant-clinic_backend)
-- React with GraphQL + Apollo Client for frontend. Deployed on Netlify [GitHub] (https://github.com/maricalmer/plant-clinic_frontend)
-
 
 ![React](https://img.shields.io/badge/React-18.2-139ECA?style=for-the-badge&logo=react&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript&logoColor=white) ![Apollo](https://img.shields.io/badge/apollo-3.7.17-2E1D80?style=for-the-badge&logo=apollographql&logoColor=white) ![GraphQL](https://img.shields.io/badge/graphql-16.7.1-F6009B?style=for-the-badge&logo=graphql&logoColor=white) ![tailwindcss](https://img.shields.io/badge/tailwindcss-3.2.2-37BCF8?style=for-the-badge&logo=tailwindcss&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-3-264DE4?style=for-the-badge&logo=css&logoColor=white) ![HTML](https://img.shields.io/badge/HTML-5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![FontAwesome](https://img.shields.io/badge/FontAwesome-5-528CD7?style=for-the-badge&logo=fontawesome&logoColor=white)
 
 ## JS Packages (non exhaustive)
 
-[![react-router-dom](https://img.shields.io/badge/animejs-3.2.1-yellow.svg)](https://yarnpkg.com/package/react-router-dom)
+[![react-router-dom](https://img.shields.io/badge/react-router-dom-6.14.0-yellow.svg)](https://yarnpkg.com/package/react-router-dom)
 [![pluralize](https://img.shields.io/badge/pluralize-8.0.0-yellow.svg)](https://yarnpkg.com/package/pluralize)
 
 ## APIs
@@ -37,19 +32,27 @@ plant-clinic is developed using:
 Clone the project
 
 ```bash
-  git clone git@github.com:maricalmer/maricalmer.github.io.git my-project
+  git clone git@github.com:maricalmer/maricalmer.github.io.git my-project-frontend
+  git clone git@github.com:maricalmer/maricalmer.github.io.git my-project-backend
 ```
 
 Go to the project directory and remove git logs
 
 ```bash
-  cd my-project
+  cd my-project-frontend
+  rm -rf .git
+  cd ..
+  cd my-project-backend
   rm -rf .git
 ```
 
 Install dependencies
 
 ```bash
+  bundle install
+  yarn install
+  cd ..
+  cd my-project-frontend
   yarn install
 ```
 
@@ -72,6 +75,16 @@ If it's not the case, add it:
 Start the server
 
 ```bash
+  cd ..
+  cd my-project-backend
+  rails s
+```
+
+In a new terminal
+
+```bash
+  cd ..
+  cd my-project-frontend
   yarn start
 ```
 
