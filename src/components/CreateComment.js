@@ -54,7 +54,7 @@ const CreateComment = (props) => {
             type="text"
             placeholder="Add comment..."
           />
-          <button className="mt-4 bg-lime-500 rounded-md p-2 lg:mt-0 lg:h-20" type="submit">Comment</button>
+          <button className="mt-4 bg-lime-700 rounded-md p-2 lg:mt-0 lg:h-20" type="submit">Comment</button>
         </div>
       </form>
     </div>
