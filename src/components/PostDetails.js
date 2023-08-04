@@ -48,7 +48,7 @@ const PostDetails = () => {
   const navigate = useNavigate();
 
   if (loading) {
-    return (<div className="ml-5 mt-5 ubuntu">loading ...</div>)
+    return (<div className="ml-3 mt-5">Loading ...</div>)
   }
 
   if (error) {
