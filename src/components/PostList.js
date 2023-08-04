@@ -33,7 +33,7 @@ const PostList = () => {
   const { data, loading } = useQuery(FEED_QUERY);
 
   if (loading) {
-    return (<div>LOADING ...</div>)
+    return (<div className="ml-5 mt-5 ubuntu">loading ...</div>)
   }
 
   return (

@@ -62,7 +62,7 @@ const CreatePost = () => {
   });
 
   if (loading) {
-    return (<div>LOADING ...</div>)
+    return (<div className="ml-5 mt-5 ubuntu">loading ...</div>)
   }
   if (error) {
     console.log(error)
