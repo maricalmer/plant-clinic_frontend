@@ -1,4 +1,4 @@
-### [plant-clinic](https://mellifluous-arithmetic-b968bd.netlify.app/), a copycat of the subreddit r/plantclinic
+### [plant-clinic](https://mellifluous-arithmetic-b968bd.netlify.app/), a copycat of the subreddit r/plantclinic powered by GraphQL API
 
 ## Description
 
