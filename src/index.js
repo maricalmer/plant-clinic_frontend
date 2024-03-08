@@ -15,7 +15,7 @@ import {
 
 const httpLink = createHttpLink({
   // uri: 'https://peaceful-cliffs-79833-a8770ca52690.herokuapp.com/graphql'
-  uri: 'https://mixed-barnacle-maricalmer.koyeb.app/graphql'
+  uri: 'https://youthful-caterpillar-maricalmer.koyeb.app/graphql'
 });
 
 const authLink = setContext((_, { headers }) => {
