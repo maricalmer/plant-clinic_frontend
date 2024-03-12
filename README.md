@@ -13,7 +13,7 @@ The core function of plant-clinic is to diagnose sick plants. If a user wonders 
 
 plant-clinic is developed using:
 
-- Rails API with GraphQL for backend. Supported by PostgreSQL database and running on Heroku. Tested via Minitest - [GitHub repo](https://github.com/maricalmer/plant-clinic_backend)
+- Rails API with GraphQL for backend. Runs on Koyeb. Serverless PostgreSQL database supported by CockroachDB. Tested via Minitest - [GitHub repo](https://github.com/maricalmer/plant-clinic_backend)
 - React with GraphQL + Apollo Client for frontend. Deployed on Netlify - [GitHub repo](https://github.com/maricalmer/plant-clinic_frontend)
 
 ## React Client
